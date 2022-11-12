@@ -11,7 +11,7 @@ always_comb begin
         led[7:0] = sw[15:8]^sw[7:0];
     end
     else if(btnr) begin
-        led[15:1] = 13'd0;
+        led[15:1] = 15'd0;
         led[0] = (sw[0]&~sw[1])|(sw[2]);
     end
     else if(btnd) begin
