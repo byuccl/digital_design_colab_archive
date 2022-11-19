@@ -1,0 +1,2 @@
+# Ignoring this makes sure the github action isn't propogated to the anon repo
+.github
