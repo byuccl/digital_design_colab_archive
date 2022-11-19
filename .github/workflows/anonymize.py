@@ -5,7 +5,13 @@ import re
 ROOT_PATH = pathlib.Path(__file__).parent.parent.parent.resolve()
 
 IGNORED_PATHS = (r"\.git*", r"\.github*")
+
 SKIP_EXTENSIONS = (".png", ".svg", ".jpg")
+
+REPLACED_STR = (
+    ("Brigham Young", "X"),
+    ("BYU", "X"),
+)
 
 
 def main():
@@ -26,8 +32,8 @@ def main():
         txt = f.open(newline="").read()
 
         # Process file text
-
-        txt = re.sub("Brigham", "X", txt)
+        for find, replace in REPLACED_STR:
+            txt = re.sub(find, replace, txt)
 
         with open(f, "w") as f:
             f.write(txt)
