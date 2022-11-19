@@ -1,0 +1,22 @@
+name: push-anon
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  push-to-anon:
+    runs-on: ubntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - shell: bash
+        env:
+          KEY: ${{ secrets.ANON_KEY }}
+        run: |
+          rm -rf .git
+          git init
+          git remote add anon https://anon36424:$KEY@github.com/anon36424/digital_design_colab.git
+          git add --all
+          git commit -m "Initial commit"
+          git branch -m master main
+          git push -u anon main --force
