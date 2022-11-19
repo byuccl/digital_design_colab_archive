@@ -18,6 +18,7 @@ jobs:
           git config --global user.name "Anonymous"
           git init
           git remote add anon https://anon36424:$KEY@github.com/anon36424/digital_design_colab.git
+          python3 .github/workflows/anonymize.py
           git add --all
           git commit -m "Initial commit"
           git branch -m master main
