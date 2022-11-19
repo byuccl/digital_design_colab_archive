@@ -9,6 +9,7 @@ IGNORED_PATHS = (r"\.git*", r"\.github*")
 SKIP_EXTENSIONS = (".png", ".svg", ".jpg")
 
 REPLACED_STR = (
+    ("/byuccl/", "/anon36424/"),
     ("Brigham Young", "X"),
     ("BYU", "X"),
 )
