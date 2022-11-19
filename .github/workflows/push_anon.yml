@@ -14,6 +14,8 @@ jobs:
           KEY: ${{ secrets.ANON_KEY }}
         run: |
           rm -rf .git
+          git config --global user.email "anon@anon.com"
+          git config --global user.name "Anonymous"
           git init
           git remote add anon https://anon36424:$KEY@github.com/anon36424/digital_design_colab.git
           git add --all
