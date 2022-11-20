@@ -10,6 +10,7 @@ SKIP_EXTENSIONS = (".png", ".svg", ".jpg")
 
 REPLACED_STR = (
     ("/byuccl/", "/anon36424/"),
+    ("/westonMS/FPGA_Colablab/", "/anon36424/digital_design_colab/"),
     ("Brigham Young", "X"),
     ("BYU", "X"),
 )
