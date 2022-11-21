@@ -23,3 +23,17 @@ jobs:
           git commit -m "Initial commit"
           git branch -m master main
           git push -u anon main --force
+          
+      - shell: bash
+        env:
+          KEY: ${{ secrets.ANON_KEY }}
+        run: |
+          git clone https://github.com/byuccl/nb_js_diagrammers
+          cd nb_js_diagrammers
+          rm -rf .git
+          git init
+          git remote add anon https://anon36424:$KEYgithub.com/anon36424/nb_js_diagrammers.git
+          git add --all
+          git commit -m "Initial commit"
+          git branch -m master main
+          git push -u anon main --force
