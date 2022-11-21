@@ -13,6 +13,7 @@ REPLACED_STR = (
     ("/westonMS/", "/anon36424/"),
     ("Brigham Young", "X"),
     ("BYU", "X"),
+    ("Nelson", "Anon"),
 )
 
 
