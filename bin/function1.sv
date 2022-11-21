@@ -4,6 +4,7 @@ module function1 (
  input logic [15:0] sw
 );
     
-// Code goes here
+// You can type code here
+// This is the answer: assign led = btnd ? sw << 3 : sw;
 
 endmodule // behavLoadableReg
