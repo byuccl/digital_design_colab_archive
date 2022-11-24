@@ -8,3 +8,5 @@ Lab 3: Seven Segment Display [![colab](https://colab.research.google.com/assets/
 Lab 4: Stopwatch [![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nelsobe/digital_design_colab/blob/main/Lab4_Stopwatch.ipynb)
 
 Lab 5: State Machines [![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nelsobe/digital_design_colab/blob/main/Lab5_State_Machines.ipynb)
+
+.
