@@ -18,7 +18,7 @@ frquestions = [
 ["What is `1011` sign extended to 8 bits wide?", 11111011],
 ["What is `0001` sign extended to 8 bits wide?", 1],
 ["What is `1001` + `0110` in Binary? (2's complement)", 1111],
-["What is `0111` + `0011` in Binary? (2's complement)", 01010],
+["What is `0111` + `0011` in Binary? (2's complement)", 0b01010],
 ["What is `1010101`+0101010` in Binary? (2's complement)", 1111111],
 ["What is `1100` - `1001` in Binary? (2's complement)", 11],
 ["What is `0111` - `0011` in Binary? (2's complement)", 100],
