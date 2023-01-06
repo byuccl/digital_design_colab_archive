@@ -6,8 +6,8 @@ from ipywidgets import AppLayout, Button, Layout, jslink, IntText, IntSlider
 frquestions = [
 ["What integer does this sign-magnitude number represent? `10101`", -5],
 ["What integer does this sign-magnitude number represent? `01110`?", 14],
-["What intger does this two's complement number represent? `10101`", -11],
-["What intger does this two's complement number represent? `01110`", 14],
+["What integer does this two's complement number represent? `10101`", -11],
+["What integer does this two's complement number represent? `01110`", 14],
 ["What is the inverse of the two's complement number? `10101`", 11],
 ["What is the inverse of the twos complement value? `01110`", -14],
 ["What is `1001` + `0110` in Binary? (Its unsigned)", 1111],
