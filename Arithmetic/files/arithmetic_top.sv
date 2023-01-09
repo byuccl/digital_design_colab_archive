@@ -1,6 +1,6 @@
 module arithmetic_top (
   input logic [15:0] sw,
-  intput logic btnc,
+  input logic btnc,
   output logic [8:0] led
   );
   //half of sw should be a and half should be b
