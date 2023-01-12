@@ -7,4 +7,4 @@ module function1 (
 // Code goes here
 assign led = btnd ? sw << 3 : sw;
 
-endmodule // behavLoadableReg
+endmodule 
