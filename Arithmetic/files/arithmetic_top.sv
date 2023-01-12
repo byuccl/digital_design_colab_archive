@@ -3,6 +3,7 @@ module arithmetic_top (
   input logic btnc,
   output logic [8:0] led
   );
+  //Answer provided
   logic [7:0] a, b;
   
   assign a = sw[7:0];

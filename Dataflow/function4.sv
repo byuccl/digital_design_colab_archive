@@ -4,7 +4,7 @@ module function4(
    input logic[8:0] sw,
    output logic[15:0] led
 );
-
+//Answer provided
 always_comb begin
    if(btnu) begin
       if(prof && !student) begin
