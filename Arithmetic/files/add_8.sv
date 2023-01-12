@@ -4,6 +4,7 @@ module add_8(
   output logic [7:0] s,
   output logic co
   );
+  //Answer Provided
   logic co0,co1,co2,co3,co4,co5,co6;
   full_add zero(.a(a[0]), .b(b[0]), .cin(cin), .co(co0), .s(s[0]));
   full_add one(.a(a[1]), .b(b[1]), .cin(co0), .co(co1), .s(s[1]));
