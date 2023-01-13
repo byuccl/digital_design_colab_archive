@@ -7,12 +7,9 @@
 
 void check(int expected_segment, Vseven_segment *dut){
   int data = dut->data;
-  int co = dut->co;
-  int a = dut->a;
-  int b = dut->b;
-  int cin = dut->cin;
-  if(s != expected_s){
-    printf("ERROR: expected segment = %d, instead segment = %d while data = %d\n", expected_segment, data);
+  int segment = dut->segment;
+  if(segment != expected_segment){
+    printf("ERROR: expected segment = %d, instead segment = %d while data = %d\n", expected_segment, segment, data);
   }
   else{
     printf("CORRECT segment = %d while data = %d\n", segment, data);
@@ -20,7 +17,7 @@ void check(int expected_segment, Vseven_segment *dut){
 }
 
 void set_values(int data, Vseven_segment *dut){
-  dut->a = a;
+  dut->data = data;
   dut->eval();
 }
 
