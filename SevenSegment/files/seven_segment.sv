@@ -1,55 +1,26 @@
-module seven_segment(
-  input logic [3:0] data,
-  output logic [6:0] segment
-);
- //A
-  assign segment[0] = (data==4'h01)?1'b1:
-                      (data==4'h02)?1'b1:
-                      (data==4'h03)?1'b1:
-                      (data==4'h07)?1'b1:
-                      (data==4'h13)?1'b1:
-                        1'b0;
-   //B
-  assign segment[1] = (data==4'h01)?1'b1:
-                      (data==4'h02)?1'b1:
-                      (data==4'h03)?1'b1:
-                      (data==4'h07)?1'b1:
-                      (data==4'h13)?1'b1:
-                        1'b0;
-   //CC
-  assign segment[2] = (data==4'h01)?1'b1:
-                      (data==4'h02)?1'b1:
-                      (data==4'h03)?1'b1:
-                      (data==4'h07)?1'b1:
-                      (data==4'h13)?1'b1:
-                        1'b0;
-   //D
-  assign segment[3] = (data==4'h01)?1'b1:
-                      (data==4'h02)?1'b1:
-                      (data==4'h03)?1'b1:
-                      (data==4'h07)?1'b1:
-                      (data==4'h13)?1'b1:
-                        1'b0;
-   //E
-  assign segment[4] = (data==4'h01)?1'b1:
-                      (data==4'h02)?1'b1:
-                      (data==4'h03)?1'b1:
-                      (data==4'h07)?1'b1:
-                      (data==4'h13)?1'b1:
-                        1'b0;
-   //F
-  assign segment[5] = (data==4'h01)?1'b1:
-                      (data==4'h02)?1'b1:
-                      (data==4'h03)?1'b1:
-                      (data==4'h07)?1'b1:
-                      (data==4'h13)?1'b1:
-                        1'b0;
-   //G
-  assign segment[6] = (data==4'h01)?1'b1:
-                      (data==4'h02)?1'b1:
-                      (data==4'h03)?1'b1:
-                      (data==4'h07)?1'b1:
-                      (data==4'h13)?1'b1:
-                        1'b0;
-  
+module seven_segment(input wire [3:0] data, output reg [6:0] segment);
+  // hex_value: 4-bit input representing the hex value to be displayed
+  // segments: 7-bit output representing the segments of the seven-segment display
+
+  always_comb begin
+    case (data)
+      4'b0000: segment = 7'b1000000;
+      4'b0001: segment = 7'b1111001;
+      4'b0010: segment = 7'b0110100;
+      4'b0011: segment = 7'b0110000;
+      4'b0100: segment = 7'b1001100;
+      4'b0101: segment = 7'b0010010;
+      4'b0110: segment = 7'b0000010;
+      4'b0111: segment = 7'b1111000;
+      4'b1000: segment = 7'b0000000;
+      4'b1001: segment = 7'b0010000;
+      4'b1010: segment = 7'b0001000;
+      4'b1011: segment = 7'b0000011;
+      4'b1100: segment = 7'b1000110;
+      4'b1101: segment = 7'b0100001;
+      4'b1110: segment = 7'b0000110;
+      4'b1111: segment = 7'b0001110;
+      default: segment = 7'b1111111;
+    endcase
+  end
 endmodule
