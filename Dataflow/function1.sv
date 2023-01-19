@@ -3,7 +3,8 @@ module function1 (
  input logic  btnd,
  input logic [15:0] sw
 );
-    
+//Answer provided
 // Code goes here
+assign led = btnd ? sw << 3 : sw;
 
-endmodule // behavLoadableReg
+endmodule 

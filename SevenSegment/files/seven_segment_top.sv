@@ -6,5 +6,7 @@ module seven_segment_top (
 );
 
   //Top module for seven_segment
-  
+  assign anode = 0;
+  seven_segment ss(.data(sw), .segment(segment[6:0]));
+  assign segment[7] = btnc;
 endmodule
