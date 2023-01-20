@@ -4,7 +4,9 @@ module stopwatch_top (
   output logic [3:0] anode,
   output logic [7:0] segment
 );
+  logic temp;
+  assign temp = 8'b11111111;
   logic [15:0] data;
-  Stopwatch stop(.clk(clk), .reset(btnc), .run(sw), .digit0(data[3:0]), .digit1(data[7:4]), .digit2(data[11:8]), .digit3(data[15:12]));
-  SevenSegmentControl display(.dataIn(data), .digitPoint(0), .digitDisplay(4'hf), .anode(anode), .segment(segment), .reset(reset), .clk(clk));
+  stopwatch stop(.clk(clk), .reset(btnc), .run(sw), .digit0(data[7:4]), .digit1(data[11:8]), .digit2(data[3:0]), .digit3(data[15:12]));
+  SevenSegmentControl display(.dataIn(data), .digitPoint(4'b0010), .digitDisplay(temp), .anode(anode), .segment(segment), .reset(reset), .clk(clk));
 endmodule
