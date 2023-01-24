@@ -28,7 +28,7 @@ frquestions = [
 def create_expanded_button(description, button_style, width='auto'):
     return Button(description=description, button_style=button_style, layout=Layout(height='auto', width=width))
 
-def create_frq(list, index, q_width=300, max_=9999):
+def create_frq(list, index, q_width=500, max_=11111111):
   qlist = list[index]
   grid = GridspecLayout(1,3, width = (str(250 + q_width) +'px'))
   grid[0,0] = create_expanded_button(qlist[0], "info", str(q_width)+'px')
