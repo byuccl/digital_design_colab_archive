@@ -1,29 +1,22 @@
-module mod_counter#(
-  //Add the parameter
-  parameter [31:0] MOD_VALUE = 4'ha
-)(
-  //Add the Inputs exactly as listed
-  input wire logic clk, reset, increment,
-  output logic rollover,
-  output logic [31:0] count
-);
-  //Code
-
-  always_ff@(posedge clk) begin
-    rollover <= 0;
-    if(reset)
-      count <= 0;
-    else if(increment)
-      if(count == MOD_VALUE - 1)
+module mod_counter #(parameter MOD_VALUE=10, WID=4) (
+    input wire logic clk, reset, increment,
+    output logic rollover,
+    output logic [WID-1:0] count
+    );
+    
+    always_ff @(posedge clk)
+        if (reset)
+            count <= 0;
+        else if (increment)
         begin
-        count <= 0;
+            if (count == MOD_VALUE-1)
+                count <= 0;
+            else
+                count <= count + 1;
         end
-      else if (count == MOD_VALUE - 2)
-        begin
-        rollover <= 1;
-        count <= count +1;
-        end
-      else
-        count <= count + 1;
-  end
+            
+    assign rolling_over = ((count == MOD_VALUE-1) && (increment == 1))?1'b1:1'b0;
+        
 endmodule
+
+
