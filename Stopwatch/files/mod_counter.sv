@@ -15,7 +15,7 @@ module mod_counter #(parameter MOD_VALUE=10, WID=4) (
                 count <= count + 1;
         end
             
-    assign rolling_over = ((count == MOD_VALUE-1) && (increment == 1))?1'b1:1'b0;
+    assign rollover = ((count == MOD_VALUE-1) && (increment == 1))?1'b1:1'b0;
         
 endmodule
 
