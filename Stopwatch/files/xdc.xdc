@@ -37,6 +37,7 @@ set_property -dict { PACKAGE_PIN V8   IOSTANDARD LVCMOS33 } [get_ports {segment[
 set_property -dict { PACKAGE_PIN U5   IOSTANDARD LVCMOS33 } [get_ports {segment[4]}]
 set_property -dict { PACKAGE_PIN V5   IOSTANDARD LVCMOS33 } [get_ports {segment[5]}]
 set_property -dict { PACKAGE_PIN U7   IOSTANDARD LVCMOS33 } [get_ports {segment[6]}]
+set_property -dict { PACKAGE_PIN V7   IOSTANDARD LVCMOS33 } [get_ports {segment[7]}]
 
 #Anodes 
 
