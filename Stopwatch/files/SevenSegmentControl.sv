@@ -63,9 +63,9 @@ module SevenSegmentControl (
 
     // Digit point (drive segment with inverted version of digit-point input)
     assign segment[7] =
-        (anode_select == 2'b00) ? ~digitPoint[0] :
-        (anode_select == 2'b01) ? ~digitPoint[1] :
-        (anode_select == 2'b10) ? ~digitPoint[2] :
+       (anode_select == 2'b00) ? ~digitPoint[0] :
+       (anode_select == 2'b01) ? ~digitPoint[1] :
+       (anode_select == 2'b10) ? ~digitPoint[2] :
         ~digitPoint[3] ;
 
     assign segment[6:0] =
